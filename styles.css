@@ -1,0 +1,132 @@
+:root {
+    --color-darkest: #06141B;
+    --color-darker: #11212D;
+    --color-dark: #253745;
+    --color-medium: #4A5C6A;
+    --color-light: #9BA8AB;
+    --color-lightest: #CCD0CF;
+  }
+  
+  /* Base styles */
+  body {
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--color-lightest);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: var(--color-darker);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav a {
+    color: var(--color-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--color-lightest);
+  }
+  
+  .content {
+    background: rgba(255, 255, 255, 0.3); /* Change to translucent white */
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    transition: transform 0.5s ease;
+    backdrop-filter: blur(10px); /* Optional: Adds a frosted glass effect */
+    color: black;
+  }
+
+        .content:hover {
+            transform: scale(1.02);
+        }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Cards */
+  .card {
+    background-color: var(--color-dark);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Buttons */
+  .button {
+    background-color: var(--color-medium);
+    color: var(--color-lightest);
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--color-dark);
+  }
+  
+  /* Form elements */
+  input, textarea {
+    background-color: var(--color-darker);
+    border: 1px solid var(--color-medium);
+    color: var(--color-lightest);
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--color-darker);
+    color: var(--color-light);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-light);
+    margin-bottom: 1rem;
+  }
+  
+  /* Links */
+  a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: var(--color-lightest);
+  }
+  
+  /* Utility classes */
+  .bg-darkest { background-color: var(--color-darkest); }
+  .bg-darker { background-color: var(--color-darker); }
+  .bg-dark { background-color: var(--color-dark); }
+  .bg-medium { background-color: var(--color-medium); }
+  .bg-light { background-color: var(--color-light); }
+  .bg-lightest { background-color: var(--color-lightest); }
+  
+  .text-darkest { color: var(--color-darkest); }
+  .text-darker { color: var(--color-darker); }
+  .text-dark { color: var(--color-dark); }
+  .text-medium { color: var(--color-medium); }
+  .text-light { color: var(--color-light); }
+  .text-lightest { color: var(--color-lightest); }

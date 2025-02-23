@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antony's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add("page-transition");
+        });
+    </script>
+    <style>
+        body  {
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--color-lightest);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+        body.page-transition {
+            opacity: 1;
+            transform: scale(1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+        nav ul li:hover {
+            transform: scale(1.1);
+        }
+        nav ul li a {
+            background: green;
+            padding: 10px 15px;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.5s ease, box-shadow 0.3s ease;
+        }
+        nav ul li a:hover {
+            background: lime;
+            box-shadow: 0 4px 10px rgba(0, 255, 0, 0.6);
+        }
+        .popup {
+            display: none;
+            position: absolute;
+            background: white;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+            top: 120%;
+            left: 50%;
+            transform: translateX(-50%) scale(0.8);
+            white-space: nowrap;
+            border: 1px solid black;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        nav ul li:hover .popup {
+            display: block;
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+        .content {
+    background: rgba(255, 255, 255, 0.3); /* Change to translucent white */
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    transition: transform 0.5s ease;
+    backdrop-filter: blur(10px); /* Optional: Adds a frosted glass effect */
+    color: black;
+}
+
+        .content:hover {
+            transform: scale(1.02);
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll("nav ul li a");
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    document.body.style.opacity = "0";
+                    document.body.style.transform = "scale(0.9)";
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 800);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="title-bar">
+            <div class="title">ANTONY'S PORTFOLIO</div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="home.html">HOME</a>
+                <div class="popup">Go to Home Page</div>
+            </li>
+            <li>
+                <a href="about.html">ABOUT</a>
+                <div class="popup">Learn More About Me</div>
+            </li>
+            <li>
+                <a href="education.html">EDUCATION</a>
+                <div class="popup">View My Education</div>
+            </li>
+            <li>
+                <a href="projects.html">PROJECTS</a>
+                <div class="popup">See My Projects</div>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="content">
+            
+            <p>A FUN FACT ABOUT Portfolios</p>
+
+            <p>Did you know that the concept of a portfolio dates back to the Renaissance? Artists and architects carried physical portfolios to showcase their masterpieces to potential patrons. Fast forward to today, and portfolios have evolved into digital platforms—essential for anyone in the creative and tech industries.
+
+                </p>
+
+                <p>WHY I CHOSE TO CREATE THIS PORTFOLIO</p>
+
+                <p>For me, this portfolio isn’t just a modern necessity; it’s a reflection of my journey in coding and design. When I first started exploring the world of technology, I was told, "If you want to stand out, let your work speak for itself." That advice stuck with me, and here we are!
+                
+                This website is a carefully crafted space where every project, every design choice, and every line of code represents a step forward in my learning and growth. From our past projects together to new, innovative ideas, this portfolio is my digital workshop—a place where creativity meets functionality.
+                
+                So, whether you’re here to see my latest designs, browse through my coding projects, or simply curious about my journey, welcome! Let’s build something amazing together.</p>
+
+
+                <p>Why This Portfolio Stands Out</p>
+                <p>I don’t just code—I create. Every project in this portfolio is a testament to my dedication, creativity, and problem-solving skills. Whether it’s designing intuitive user interfaces or building seamless functionality, I approach every challenge with precision and passion.
+
+                    I believe that great projects aren’t just about writing code; they’re about crafting experiences that are efficient, visually appealing, and impactful. That’s exactly what you’ll find here—work that speaks for itself, built with the highest standards of design and development.
+                    
+                    At the end of the day, I don’t just aim to be good at what I do—I aim to be the best. And this portfolio is proof of that. 🚀🔥</p>
+            </div>
+    </main>
+</body>
+</html>
